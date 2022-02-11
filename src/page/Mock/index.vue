@@ -1,6 +1,5 @@
 <template>
   <div class="mock">
-    <el-button @click="goBack">goBack</el-button>
     <div>{{ JSON.stringify(data) }}</div>
   </div>
 </template>
@@ -19,11 +18,6 @@ export default {
     });
   },
   computed: {},
-  methods: {
-    goBack() {
-      window.history.length > 1 ? this.$router.go(-1) : this.$router.push("/");
-    },
-  },
 };
 </script>
 

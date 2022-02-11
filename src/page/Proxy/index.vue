@@ -1,6 +1,5 @@
 <template>
   <div class="proxy">
-    <el-button @click="goBack">goBack</el-button>
     <div>
       {{ JSON.stringify(list) }}
     </div>
@@ -16,11 +15,7 @@ export default {
     };
   },
   computed: {},
-  methods: {
-    goBack() {
-      window.history.length > 1 ? this.$router.go(-1) : this.$router.push("/");
-    },
-  },
+  methods: {},
   created() {
     this.$axios.get("/api/search/users?q=python").then((result) => {
       this.list = result.items;
