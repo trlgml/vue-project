@@ -3,12 +3,18 @@ import App from './App.vue'
 import store from './store'
 import router from '@/routers'
 import axios from "@/services";
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 require('./mock');
 
-Vue.config.productionTip = false
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
+
+import ViewUI from 'view-design';
+import 'view-design/dist/styles/iview.css';
+Vue.use(ViewUI);
+
+Vue.config.productionTip = false
+
 Vue.prototype.$axios = axios
 
 new Vue({
