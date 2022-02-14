@@ -1,5 +1,5 @@
 <template>
-  <div class="logo">
+  <div class="SoltTest">
     <img src="../assets/logo.png" />
     <slot name="header"></slot>
     <slot></slot>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "Logo",
+  name: "SoltTest",
 };
 </script>
 

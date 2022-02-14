@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store'
+import store from '@/store'
 import router from '@/routers'
 import axios from "@/services";
 require('./mock');
@@ -12,6 +12,11 @@ Vue.use(ElementUI);
 import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
 Vue.use(ViewUI);
+
+const files = require.context('@/filters', true, /\.js$/)
+files.keys().forEach(key => {
+  Vue.filter(key.replace(/(\.\/|\.js)/g, ''), files(key).default)
+})
 
 Vue.config.productionTip = false
 

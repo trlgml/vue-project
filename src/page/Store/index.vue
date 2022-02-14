@@ -1,6 +1,5 @@
 <template>
   <div class="Store">
-    <el-button @click="goBack">goBack</el-button>
     <el-button @click="addItem({ a: 3 })" :disabled="checkoutStatus"
       >addItme</el-button
     >
@@ -24,9 +23,6 @@ export default {
     }),
   },
   methods: {
-    goBack() {
-      window.history.length > 1 ? this.$router.go(-1) : this.$router.push("/");
-    },
     ...mapActions("demo", ["addItem"]),
   },
   created() {
